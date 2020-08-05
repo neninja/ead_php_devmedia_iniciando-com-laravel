@@ -16,3 +16,48 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('contato', function () {
+    return 'Página de contato';
+});
+
+Route::post('contato', function () {
+    return 'Realiza um post';
+});
+
+Route::put('contato', function () {
+    return 'Realiza um put';
+});
+
+Route::delete('contato', function () {
+    return 'Realiza um delete';
+});
+
+Route::match(['get', 'post'], 'sobre', function () {
+    return 'trabalhando com match';
+});
+
+Route::any('todos', function () {
+    return 'trabalhando com todos verbos http';
+});
+
+Route::get('artigos/{id}', function ($id) {
+    return "Artigo: {$id}";
+});
+
+Route::get('produtos/{id?}', function ($id = null) {
+    return "Produto: {$id}";
+});
+
+Route::get('teste', ['as' => 'detalhe', function () {
+    return 'Página com alias para ' . route('detalhe');
+}]);
+
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('contato', function () {
+        return 'Página de admin/contato';
+    });
+    Route::get('sobre', function () {
+        return 'Página de admin/sobre';
+    });
+});
