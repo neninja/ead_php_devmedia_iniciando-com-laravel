@@ -17,6 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('aluno', 'Aluno\AlunoController@index');
+
+Route::get('livro/lista', [
+    'uses' => 'LivroController@index',
+    'as' => 'livro.index'
+]);
+
+// deprecated: https://github.com/laravel/framework/issues/10971#issuecomment-249171540
+// Route::controller('produto', 'ProdutoController');
+
+/*
 Route::get('contato', function () {
     return 'Página de contato';
 });
@@ -61,3 +72,4 @@ Route::group(['prefix' => 'admin'], function(){
         return 'Página de admin/sobre';
     });
 });
+ */
