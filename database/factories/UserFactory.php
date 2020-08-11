@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\Livro;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,12 +17,12 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(Livro::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'remember_token' => Str::random(10),
+        'titulo' => $faker->text(150),
+        'descricao' => $faker->text(150)
+        // postgresql:
+        // value too long for type character varying(255) (SQL: insert into "livros" ("titulo", "descricao", "updated_at", "created_at") values (Modi consectetur totam doloremque numquam vel. Explicabo dolor voluptatem velit dolorem. Quia voluptas dolorum quo est eos facere., Blanditiis ut quos voluptates ut vitae sed et a. Molestiae eligendi dolores ipsam doloremque dolores alias. Iusto iusto suscipit fugit consequatur et laboriosam animi. Esse impedit sequi omnis odit voluptatum deserunt. Est tenetur eum rerum laudantium unde occaecati., 2020-08-11 04:48:34, 2020-08-11 04:48:34) returning "id")
+        // 'titulo' => $faker->paragraph,
     ];
 });

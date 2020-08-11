@@ -8,7 +8,7 @@
 2. Instale as dependências do php: ``composer i``
 3. Crie `.env` com base ao `.env.example`
 4. Crie o banco de dados
-5. Crie as tabelas com as migrations: ``php artisan migrate``
+5. Crie as tabelas com as migrations: ``php artisan migrate --seed``
 
 ## Run
 
