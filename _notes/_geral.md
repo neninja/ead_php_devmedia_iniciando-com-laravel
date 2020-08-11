@@ -12,6 +12,8 @@ php artisan make:seeder LivrosTableSeeder
 ```sh
 # roda migrations
 php artisan migrate
+# roda migrations com seed
+php artisan migrate --seed
 # retorna 1 migration
 php artisan migrate:rollback
 # reseta todas migrations
