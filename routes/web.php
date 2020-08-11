@@ -35,6 +35,11 @@ Route::get('livro/lista', [
     'as' => 'livro.index'
 ]);
 
+Route::get('usuario', [
+    'uses' => 'UsuarioController@index',
+    'as' => 'usuario.index'
+]);
+
 // deprecated: https://github.com/laravel/framework/issues/10971#issuecomment-249171540
 // Route::controller('produto', 'ProdutoController');
 Route::get('produto', 'ProdutoController@index');
