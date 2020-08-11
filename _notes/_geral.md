@@ -4,6 +4,7 @@ php artisan make:controller UsuarioController
 
 php artisan make:migration cria_livros_tabela
 php artisan make:migration cria_produtos_tabela --create=produtos
+php artisan make:migration renomeia_produtos_artigos --table=produtos
 
 php artisan make:seeder LivrosTableSeeder
 ```
