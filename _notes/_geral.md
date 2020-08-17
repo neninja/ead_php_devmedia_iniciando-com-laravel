@@ -25,3 +25,13 @@ php artisan migrate:status
 ```sh
 php artisan db:seed
 ```
+
+```sh
+# Não existe mais
+php artisan make:auth
+
+# Deve instalar novo pacote para o novo comando
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm i
+npm run dev

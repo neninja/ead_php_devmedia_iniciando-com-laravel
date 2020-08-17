@@ -1,5 +1,7 @@
 # ead_php_devmedia_iniciando-com-laravel
 
+CRUD com laravel, usando login com cadastros de novos usuários e formulários com bootstrap.
+
 > Projeto referente a [este](https://www.devmedia.com.br/curso/curso-de-laravel/451) curso.
 
 ## Setup
