@@ -1,6 +1,7 @@
 ```sh
-php artisan make:model Usuario
 php artisan make:controller UsuarioController
+php artisan make:model Usuario
+php artisan make:model Cliente -m # cria model e a migration de Cliente
 
 php artisan make:migration cria_livros_tabela
 php artisan make:migration cria_produtos_tabela --create=produtos

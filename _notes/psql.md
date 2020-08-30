@@ -6,7 +6,8 @@ O curso originalmente foi feito com mysql, porém quis tentar com psql
 
 ```sh
 # Entrar
-psql -U postgresql -d devmedia_iniciando-laravel -W 123456
+psql -U postgres -d devmedia_iniciando-laravel2
+#psql -U postgresql -d devmedia_iniciando-laravel2
 
 # criar db
 createdb -U postgres devmedia_iniciando-laravel 
