@@ -39,6 +39,9 @@
                                 <td>{{ $cliente->endereco }}</td>
                                 <td>
                                     <a
+                                        href="{{ route('clientes.detalhe', $cliente->id) }}"
+                                        class="btn btn-default">Detalhe</a>
+                                    <a
                                         href="{{ route('clientes.editar', $cliente->id) }}"
                                         class="btn btn-default">Editar</a>
                                     <a

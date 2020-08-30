@@ -32,3 +32,6 @@ Route::put('/clientes/atualizar/{id}', 'ClienteController@atualizar')
 
 Route::get('/clientes/deletar/{id}', 'ClienteController@deletar')
     ->name('clientes.deletar');
+
+Route::get('/clientes/detalhe/{id}', 'ClienteController@detalhe')
+    ->name('clientes.detalhe');

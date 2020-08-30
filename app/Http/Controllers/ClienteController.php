@@ -15,8 +15,14 @@ class ClienteController extends Controller
 
     public function index()
     {
-        $clientes = \App\Cliente::paginate(15);
+        $clientes = Cliente::paginate(15);
         return view('cliente.index', compact('clientes'));
+    }
+
+    public function detalhe($id)
+    {
+        $cliente = Cliente::find($id);
+        return view('cliente.detalhe', compact('cliente'));
     }
 
     public function adicionar()
