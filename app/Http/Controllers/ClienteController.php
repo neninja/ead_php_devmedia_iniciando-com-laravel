@@ -59,4 +59,27 @@ class ClienteController extends Controller
 
         return redirect()->route('clientes.index');
     }
+
+    public function deletar($id)
+    {
+        // para evitar erros de integridade com o bd, primeiro tem que apagar
+        // os telefones. 1 Cliente pode ter N telefones (1:N)
+        $cliente = Cliente::find($id);
+
+        if(!$cliente->deletarTelefones()){
+            \Session::flash('flash_message', [
+                'msg' => 'Registro não pode ser deletado',
+                'class' => 'alert-danger'
+            ]);
+            return redirect()->route('clientes.index');
+        }
+
+        $cliente->delete();
+
+        \Session::flash('flash_message', [
+            'msg' => 'Cliente deletado com sucesso',
+            'class' => 'alert-success'
+        ]);
+        return redirect()->route('clientes.index');
+    }
 }

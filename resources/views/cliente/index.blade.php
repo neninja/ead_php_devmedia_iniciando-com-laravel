@@ -41,7 +41,9 @@
                                     <a
                                         href="{{ route('clientes.editar', $cliente->id) }}"
                                         class="btn btn-default">Editar</a>
-                                    <a class="btn btn-danger">Deletar</a>
+                                    <a
+                                        href="javascript:confirm('Deletar esse registro') ? window.location.href='{{ route('clientes.deletar', $cliente->id) }}' : ''"
+                                        class="btn btn-danger">Deletar</a>
                                 </td>
                             </tr>
                         @endforeach

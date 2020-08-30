@@ -29,3 +29,6 @@ Route::get('/clientes/editar/{id}', 'ClienteController@editar')
     ->name('clientes.editar');
 Route::put('/clientes/atualizar/{id}', 'ClienteController@atualizar')
     ->name('clientes.atualizar');
+
+Route::get('/clientes/deletar/{id}', 'ClienteController@deletar')
+    ->name('clientes.deletar');
