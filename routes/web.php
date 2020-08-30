@@ -19,5 +19,13 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/clientes', 'ClienteController@index')->name('clientes.index');
-Route::get('/adicionar', 'ClienteController@adicionar')->name('clientes.adicionar');
-Route::post('/salvar', 'ClienteController@salvar')->name('clientes.salvar');
+
+Route::get('/clientes/adicionar', 'ClienteController@adicionar')
+    ->name('clientes.adicionar');
+Route::post('/clientes/salvar', 'ClienteController@salvar')
+    ->name('clientes.salvar');
+
+Route::get('/clientes/editar/{id}', 'ClienteController@editar')
+    ->name('clientes.editar');
+Route::put('/clientes/atualizar/{id}', 'ClienteController@atualizar')
+    ->name('clientes.atualizar');

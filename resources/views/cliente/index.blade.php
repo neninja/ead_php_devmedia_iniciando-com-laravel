@@ -38,7 +38,9 @@
                                 <td>{{ $cliente->email }}</td>
                                 <td>{{ $cliente->endereco }}</td>
                                 <td>
-                                    <a class="btn btn-default">Editar</a>
+                                    <a
+                                        href="{{ route('clientes.editar', $cliente->id) }}"
+                                        class="btn btn-default">Editar</a>
                                     <a class="btn btn-danger">Deletar</a>
                                 </td>
                             </tr>
