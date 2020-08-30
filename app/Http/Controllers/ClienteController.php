@@ -30,7 +30,7 @@ class ClienteController extends Controller
         return view('cliente.adicionar');
     }
 
-    public function salvar(Request $request)
+    public function salvar(\App\Http\Requests\ClienteRequest $request)
     {
         Cliente::create($request->all());
 
@@ -54,7 +54,7 @@ class ClienteController extends Controller
         return view('cliente.editar', compact('cliente'));
     }
 
-    public function atualizar(Request $request, $id)
+    public function atualizar(\App\Http\Requests\ClienteRequest $request, $id)
     {
         $cliente = Cliente::find($id)->update($request->all());
 

@@ -23,27 +23,42 @@
                             <input
                                 type="text"
                                 name="nome"
-                                class="form-control"
+                                class="form-control {{ $errors->has('nome') ? 'is-invalid' : '' }}"
                                 value="{{ $cliente->nome }}"
                                 placeholder="Nome do cliente">
+                            @if($errors->has('nome'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('nome') }}</strong>
+                            </span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input
                                 type="text"
                                 name="email"
-                                class="form-control"
+                                class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}"
                                 value="{{ $cliente->email }}"
                                 placeholder="Email do cliente">
+                            @if($errors->has('email'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="endereco">Endereço</label>
                             <input
                                 type="text"
                                 name="endereco"
-                                class="form-control"
+                                class="form-control {{ $errors->has('endereco') ? 'is-invalid' : '' }}"
                                 value="{{ $cliente->endereco }}"
                                 placeholder="Endereço do cliente">
+                            @if($errors->has('endereco'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('endereco') }}</strong>
+                            </span>
+                            @endif
                         </div>
                         <button class="btn btn-info">Editar</button>
                     </form>
