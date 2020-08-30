@@ -14,13 +14,39 @@
                         </div>
                     @endif
 
-                    View de lista de clientes
+                    <p>
+                    <a class="btn btn-info" href="#">Adicionar</a>
+                    </p>
 
-                    @foreach($clientes as $cliente)
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>#</td>
+                                <td>Nome</td>
+                                <td>E-mail</td>
+                                <td>Endereco</td>
+                                <td>Ação</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($clientes as $cliente)
+                            <tr>
+                                <th scope="row">{{ $cliente->id }}</th>
+                                <td>{{ $cliente->nome }}</td>
+                                <td>{{ $cliente->email }}</td>
+                                <td>{{ $cliente->endereco }}</td>
+                                <td>
+                                    <a class="btn btn-default">Editar</a>
+                                    <a class="btn btn-danger">Deletar</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
 
-                    <li>{{ $cliente->nome }}</li>
-
-                    @endforeach
+                    <div align="center">
+                        {!! $clientes->links() !!}
+                    </div>
                 </div>
             </div>
         </div>
