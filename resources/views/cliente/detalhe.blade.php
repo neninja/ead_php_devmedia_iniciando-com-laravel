@@ -44,7 +44,7 @@
                     </table>
 
                     <p>
-                        <a class="btn btn-info" href="">Adicionar telefone</a>
+                    <a class="btn btn-info" href="{{ route('telefones.adicionar', $cliente->id) }}">Adicionar telefone</a>
                     </p>
 
                 </div>

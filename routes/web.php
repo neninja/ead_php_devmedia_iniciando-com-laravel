@@ -35,3 +35,8 @@ Route::get('/clientes/deletar/{id}', 'ClienteController@deletar')
 
 Route::get('/clientes/detalhe/{id}', 'ClienteController@detalhe')
     ->name('clientes.detalhe');
+
+Route::get('/telefones/adicionar/{id}', 'TelefoneController@adicionar')
+    ->name('telefones.adicionar');
+Route::post('/telefones/salvar/{id}', 'TelefoneController@salvar')
+    ->name('telefones.salvar');
