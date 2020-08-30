@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dd', function () {
+    // dd => var_dump();die;
+    dd(
+        base_path(), // caminho até o projeto
+        database_path(),
+        public_path(),
+        storage_path(),
+    );
+});;
 
 Auth::routes();
 
