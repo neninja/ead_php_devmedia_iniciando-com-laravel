@@ -40,3 +40,11 @@ Route::get('/telefones/adicionar/{id}', 'TelefoneController@adicionar')
     ->name('telefones.adicionar');
 Route::post('/telefones/salvar/{id}', 'TelefoneController@salvar')
     ->name('telefones.salvar');
+
+Route::get('/telefones/editar/{id}', 'TelefoneController@editar')
+    ->name('telefones.editar');
+Route::put('/telefones/atualizar/{id}', 'TelefoneController@atualizar')
+    ->name('telefones.atualizar');
+
+Route::get('/telefones/deletar/{id}', 'TelefoneController@deletar')
+    ->name('telefones.deletar');

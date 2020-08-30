@@ -34,8 +34,10 @@
                                 <td>{{ $telefone->telefone }}</td>
                                 <td>
                                     <a
+                                        href="{{ route('telefones.editar', $telefone->id) }}"
                                         class="btn btn-default">Editar</a>
                                     <a
+                                        href="javascript:confirm('Deletar esse registro') ? window.location.href='{{ route('telefones.deletar', $telefone->id) }}' : ''"
                                         class="btn btn-danger">Deletar</a>
                                 </td>
                             </tr>
