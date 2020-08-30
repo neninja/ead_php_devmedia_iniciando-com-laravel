@@ -1,3 +1,4 @@
+## Comandos do artisan utilizados
 ```sh
 php artisan make:controller UsuarioController
 php artisan make:model Usuario
@@ -36,3 +37,10 @@ composer require laravel/ui
 php artisan ui bootstrap --auth
 npm i
 npm run dev
+```
+
+## Nomes
+
+| Model   | Tabela   | Controller | Rota     |
+|---------|----------|------------|----------|
+| Cliente | Clientes | Cliente    | clientes |
